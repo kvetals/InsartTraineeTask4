@@ -8,7 +8,18 @@
 </head>
 <body>
 <%User user = (User) session.getAttribute("user"); %>
+<%if (user == null){ %>
+<jsp:forward page="index.html">
+   <jsp:param name="errMsg"
+   value="The name or password is not valid" />
+</jsp:forward>
+<%} %>
 <p align="right">You signed in as "<%=user.getUserLogin() %>"</p>
+<form action="Logout" method="post">
+	
+	<input type="submit" value="Logout"/>
+	
+</form>
 
 <h1>Some page with fantastic design and functionality!</h1>
 </body>

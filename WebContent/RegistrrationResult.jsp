@@ -11,7 +11,7 @@
 String userLogin = user.getUserLogin();%>
 	<h1>Hello dear <%=user.getUserLogin() %></h1>
 	<p>Please, take our sincere congratulations with registration at the best site of the WWW!!!</p>
-	<form action="LoginControllerServlet" method="post">		
+	<form action="Login" method="post">		
 		<input type="submit" value="Just push it to go on :-)"/>
 	</form>
 </body>
